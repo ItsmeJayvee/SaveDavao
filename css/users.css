@@ -1,0 +1,36 @@
+#fire{
+    width: 250px !important;
+}
+#flood{
+    width: 250px !important;
+}
+#earthquake{
+    width: 250px !important;
+}
+#crime{
+    width: 250px !important;
+}
+#accident{
+    width: 250px !important;
+}
+#map {
+    height: 100%;
+}
+#uploader{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin-bottom: 1px;
+}
+#uploader2{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin-bottom: 1px;
+}
+#fullname{
+    text-shadow: 2px 2px 2px black !important;
+}
+#email{
+    text-shadow: 2px 2px 2px black !important;
+}

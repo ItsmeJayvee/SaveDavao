@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/users.css">
+    <title>SaveDavao</title>
+</head>
+<body>
+<nav class="green darken-3">
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+</nav>
+
+<ul id="slide-out" class="sidenav sidenav-close">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="/img/davao.jpg" class="responsive-img">
+            </div>
+            <a href="#user"><img class="circle" src="" id="emptyPic"></a>
+            <a href="#name"><span class="white-text name" id="fullname"></span></a>
+            <a href="#email"><span class="white-text email" id="email"></span></a>
+        </div>
+    </li>
+    <li><a href="#!" id="profileBtn"><i class="material-icons">account_circle</i>Profile</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#" id="logoutBtn"><i class="material-icons">exit_to_app</i>Logout</a></li>
+</ul>
+
+<div class="row">
+    <div class="col s12 m12 l12">
+        <br>
+    </div>
+
+    <div class="col s12 m12 l12 center-align">
+        <button class="btn-large waves-effect waves-light green darken-3" style="font-size: small;" id="fire">Report Fire</button>
+    </div>
+    <div class="col s12 m12 l12">
+        <br>
+    </div>
+    <div class="col s12 m12 l12 center-align">
+        <button class="btn-large waves-effect waves-light green darken-3" style="font-size: small;" id="flood">Report Flood</button>
+    </div>
+    <div class="col s12 m12 l12">
+        <br>
+    </div>
+    <div class="col s12 m12 l12 center-align">
+        <button class="btn-large waves-effect waves-light green darken-3" style="font-size: small;" id="earthquake">Report Earthquake</button>
+    </div>
+    <div class="col s12 m12 l12">
+        <br>
+    </div>
+    <div class="col s12 m12 l12 center-align">
+        <button class="btn-large waves-effect waves-light green darken-3" style="font-size: small;" id="crime">Report Crime</button>
+    </div>
+    <div class="col s12 m12 l12">
+        <br>
+    </div>
+    <div class="col s12 m12 l12 center-align">
+        <button class="btn-large waves-effect waves-light green darken-3" style="font-size: small;" id="accident">Report Accident</button>
+    </div>
+</div>
+
+<div class="modal modal-fixed-footer" id="newPin">
+    <div class="modal-content container">
+        <div class="row">
+            <div class="col s12 m12 l12 center-align">
+                <h6>Please nominate a PIN code</h6>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="newPin1" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="newPin2" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="newPin3" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="newPin4" class="validate" readonly>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="one">1</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="two">2</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="three">3</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="four">4</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="five">5</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="six">6</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="seven">7</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="eight">8</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="nine">9</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s12 m12 l12 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="zero">0</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-flat waves-effect waves-light" id=eraseBtn1><i class="material-icons">backspace</i></button>
+    </div>
+</div>
+
+<div class="modal modal-fixed-footer" id="enterPin">
+    <div class="modal-content container">
+        <div class="row">
+            <div class="col s12 m12 l12 center-align">
+                <h6>Enter PIN Code</h6>
+                <p class="red-text hide" style="font-size: x-small;" id="wrongPin">Invalid PIN code</p>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="enterPin1" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="enterPin2" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="enterPin3" class="validate" readonly>
+            </div>
+            <div class="col s3 m3 l3">
+                <input type="number" id="enterPin4" class="validate" readonly>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="one1">1</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="two2">2</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="three3">3</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="four4">4</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="five5">5</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="six6">6</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="seven7">7</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="eight8">8</button>
+            </div>
+            <div class="col s4 m4 l4 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="nine9">9</button>
+            </div>
+            <div class="col s12 m12 l12">
+                <br>
+            </div>
+            <div class="col s12 m12 l12 center-align">
+                <button class="btn-floating waves-effect waves-light red" id="zero0">0</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-flat waves-effect waves-light" id=eraseBtn2><i class="material-icons">backspace</i></button>
+    </div>
+</div>
+
+<div class="modal" id="profile">
+    <div class="modal-content container">
+        <div class="row">
+            <div class="col s12 m12 l12 center-align">
+                <h5><b>Profile</b></h5>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="fnameProfile" class="validate">
+                <label for="fnameProfile">Full name</label>
+                <h6 class="red-text hide center-align" id="fnameMissing" style="font-size: x-small;">Please enter full name first.</h6>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">email</i>
+                <input type="text" id="emailProfile" class="validate">
+                <label for="email">Email address</label>
+            </div>
+            <div class="input-field col s12 m12 l12" id="uploadDiv">
+                <span>Upload profile photo:</span>
+                <progress value="0" max="100" id="uploader">0%</progress>
+                <input type="file" value="upload" id="fileBtn">
+            </div>
+            <div class="input-field col s12 m12 l12 center-align">
+                <button class="hide btn waves-effect waves-light green darken-3" id="submitProfile">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="profile2">
+    <div class="modal-content container">
+        <div class="row">
+            <div class="col s12 m12 l12 center-align">
+                <h5><b>Profile</b></h5>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="fnameProfile2" class="validate">
+                <label for="fnameProfile">Full name</label>
+                <h6 class="red-text hide center-align" id="fnameMissing2" style="font-size: x-small;">Please enter full name first.</h6>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">email</i>
+                <input type="text" id="emailProfile2" class="validate">
+                <label for="email">Email address</label>
+            </div>
+            <div class="input-field col s12 m12 l12" id="uploadDiv">
+                <span>Upload profile photo:</span>
+                <progress value="0" max="100" id="uploader2">0%</progress>
+                <input type="file" value="upload" id="fileBtn2">
+            </div>
+            <div class="input-field col s12 m12 l12 center-align">
+                <button class="hide btn waves-effect waves-light green darken-3" id="submitProfile2">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-fixed-footer" id="mapLocation">
+    <div class="modal-content">
+        <div id="map"></div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-flat waves-effect waves-light modal-close"><i class="material-icons">close</i></button>
+    </div>
+</div>
+
+<div class="modal" id="sure">
+    <div class="modal-content">
+        <div class="row">
+            <div class="input-field col s12 m12 l12 center-align">
+                <i class="material-icons large">new_releases</i>
+            </div>
+            <div class="input-field col s12 m12 l12 center-align">
+                <p id="textMessage"></p>
+            </div>
+            <div class="input-field col s6 m6 l6 center-align">
+                <button class="btn waves-effect waves-light green darken-3" id="confirmPin">Confirm</button>
+            </div>
+            <div class="input-field col s6 m6 l6 center-align">
+                <button class="btn waves-effect waves-light green darken-3 modal-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzCdWkujeVBCo_Ysu1VvrhD0UklqiqRBE&libraries=&v=weekly" async></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="/js/users.js"></script>
+</body>
+</html>
